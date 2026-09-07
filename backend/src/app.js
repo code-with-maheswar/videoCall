@@ -16,7 +16,7 @@ app.get('/in', (req, res) => {
 
 let start = async () => {
   const con = await mongoose.connect(process.env.MONGO_URL);
-  console.log(`result of db ${con.connection.name}`);
+  console.log(`result of db ${con.connection.host}`);
   server.listen(process.env.PORT || 8080, () => {});
 };
 
