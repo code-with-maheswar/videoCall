@@ -1,12 +1,17 @@
 import React from 'react';
-import { LandingPage } from './pages/LandingPage.jsx';
+import LandingPage from './pages/Landing';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-const App = () => {
+function App() {
   return (
     <>
-      <LandingPage />
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </Router>
     </>
   );
-};
+}
 
 export default App;
